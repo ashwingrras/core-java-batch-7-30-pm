@@ -5,7 +5,9 @@ package org.example.multithreading;
        1. NEW
        2. RUNNABLE
        3. TIMED_WAITING
-       4. TERMINATED
+       4. BLOCKED
+       5. WAITING
+       6. TERMINATED
 
 
  */
