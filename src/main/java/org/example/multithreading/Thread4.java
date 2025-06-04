@@ -1,5 +1,15 @@
 package org.example.multithreading;
 
+/*
+    1. NEW
+    2. RUNNABLE
+    3. TIMED_WAITING
+    4. TERMINATED
+
+    synchronized method
+
+ */
+
 public class Thread4 extends Thread
 {
     @Override
