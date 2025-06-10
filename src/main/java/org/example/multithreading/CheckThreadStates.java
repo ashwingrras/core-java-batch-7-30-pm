@@ -8,8 +8,6 @@ package org.example.multithreading;
        4. BLOCKED
        5. WAITING
        6. TERMINATED
-
-
  */
 public class CheckThreadStates
 {
