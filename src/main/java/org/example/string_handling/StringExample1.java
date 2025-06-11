@@ -81,5 +81,30 @@ public class StringExample1
         country = country.toUpperCase();
         System.out.println("country = " + country);
 
+        int aa = 10; // aa stack
+        sum(10, 12); // sum method call, a and b are stack variables
+        // sum: method name
+
+        String str = "Hello World"; // str is a reference variable pointing to a String object in heap memory
+        // heap : string pool
+
+        String cityName_1 = "jaipur"; // heap - pool
+        String cityName_2 = new String("jaipur"); // heap
+        String cityName_3 = new String("jaipur"); // heap
+
+        // string immutable
+
+        cityName_1 = cityName_1.concat(", rajasthan ");
+        cityName_2 += ", rajasthan ";
+        System.out.println("cityName_1 = " + cityName_1);
+        System.out.println("cityName_2 = " + cityName_2);
+
     }
+
+
+    public static int sum(int a, int b)
+    {
+        return a + b;
+    }
+
 }
