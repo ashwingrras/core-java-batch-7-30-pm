@@ -34,10 +34,13 @@ public class StringExample2
         }
 
         // find first, middle and last name
-        // String fullName = "ashwin kumar"
-        // String fullName = "ajay kumar sharma"
-        // String fullName = "bhanu pratap singh joshi"
+        // space count: 0 . fname
         //String fullName = "paramanand"
+        // space count: 1 . fname, lname
+        // String fullName = "ashwin kumar"
+        // space count: 2. fname, mname, lname
+        // String fullName = "ajay kumar sharma"
+
     }
 }
 
