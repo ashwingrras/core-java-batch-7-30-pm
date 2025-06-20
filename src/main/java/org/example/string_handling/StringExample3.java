@@ -1,5 +1,7 @@
 package org.example.string_handling;
 
+import java.util.Arrays;
+
 /*
             String Methods:
             1. length() - returns the length of the string
@@ -64,12 +66,75 @@ public class StringExample3
         System.out.println(str2.contains("rajasthan"));
         System.out.println(str2.contains("maharastra"));
 
-        String userName = "              ashwin          kumar                ";
+        String userName = "              ashwin          kumar      bajaj                ";
         System.out.println(userName.length());
         System.out.println(userName.trim().length());
-
-        char[] values = {'a','b','c','d','e','a','b','g'};
+        // ashwin kumar
+        userName = userName.trim();
+        System.out.println("userName after trim = " + userName);
+        //userName = userName.replaceAll("\\s+", " "); // this will not change the original string, it will return a new string
+        //System.out.println("userName after removing spaces = " + userName);
+        boolean isSpaceFound = false;
+        // "ashwin     kumar" -> "ashwin kumar"
+        String modifiedUserName = "";
+        for(int i=0; i < userName.length(); i++)
+        {
+            char ch = userName.charAt(i);
+            if(ch == ' ')
+            {
+             if(!isSpaceFound)
+             {
+                 modifiedUserName += ch;
+                 isSpaceFound = true;
+             }
+            }
+            else
+            {
+                modifiedUserName += ch;
+                isSpaceFound = false;
+            }
+        }
+        System.out.println("modifiedUserName = " + modifiedUserName);
+        // remove duplicate characters from a char array
+        char[] values = {'a','b','c','d','e','a','b','g','g','g','d','a'};
+        System.out.println("values = " + Arrays.toString(values));
+        String valueString = "";
         // "abcdeg"
+        for(int i =0; i < values.length; i++)
+        {
+            String value = String.valueOf(values[i]);
+            if(!valueString.contains(value))
+            {
+                valueString += value;
+            }
+        }
+        System.out.println("valueString = " + valueString);
+        values = valueString.toCharArray();
+        System.out.println("values = " + Arrays.toString(values));
+
+        String token = "abcdefgaddegfil";
+        // a : 2, b: 1, c: 1, d: 3, e: 2, f: 1, g: 2, i: 1, l: 1
+        // [2,1,1,3,2,1,2,1,1]
+        String myName = "ashwin"; // new object
+        myName += " kumar"; // new object
+        // String is immutable, so every time we modify it, a new object is created
+        // But StringBuilder is mutable, so we can modify it without creating a new object
+
+
+        // But StringBuffer is mutable, so we can modify it without creating a new object
+
+        // String Builder asynchronous, so it is not thread-safe but faster than StringBuffer
+        StringBuilder stringBuilder = new StringBuilder("...."); // new object
+        stringBuilder.append("Hello"); // no new object
+        stringBuilder.append(" World"); // no new object
+        System.out.println("stringBuilder = " + stringBuilder);
+
+        // But StringBuffer is synchronized, so it is thread-safe but slower than StringBuilder
+        StringBuffer stringBuffer = new StringBuffer("....");
+        stringBuffer.append("Hello"); // no new object
+        stringBuffer.append(" World"); // no new object
+        System.out.println("stringBuffer = " + stringBuffer);
+
 
     }
 }
