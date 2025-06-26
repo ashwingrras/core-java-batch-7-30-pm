@@ -4,6 +4,12 @@ import java.util.ArrayDeque;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+/*
+
+
+
+ */
+
 public class QueueExample {
     public static void main(String[] args) {
         // Queue is an interface, we can use LinkedList or PriorityQueue to implement it

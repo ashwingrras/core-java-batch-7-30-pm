@@ -24,7 +24,7 @@ public class TreeSetExample {
 
         System.out.println(treeSet);
         System.out.println(treeSet.descendingSet());
-
+        treeSet.higher("Bhavika");
         for (String value : treeSet) {
             System.out.println("value = " + value);
         }
