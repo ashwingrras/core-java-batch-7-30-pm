@@ -2,7 +2,7 @@ package org.example.date_time;
 
 import java.util.Date;
 import java.util.Scanner;
-
+// timestamp first available in 1970-01-01 00:00:00 UTC
 public class DateTimeExample1 {
     public static void main(String[] args) {
         Date date = new Date();
