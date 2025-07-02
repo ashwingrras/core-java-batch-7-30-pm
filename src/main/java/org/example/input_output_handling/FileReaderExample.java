@@ -13,9 +13,12 @@ public class FileReaderExample
             //System.out.println( reader.read());
             //System.out.println((char) reader.read()); // Read the first character
             int ch;
+            int loopCount = 0; // Initialize a counter for characters read
             while((ch = reader.read()) != -1) {
                 System.out.print((char) ch); // Read and print each character
+                loopCount++;
             }
+            System.out.println("\nTotal characters read: " + loopCount); // Print the total count of characters read
             reader.close(); // Close the FileReader
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);

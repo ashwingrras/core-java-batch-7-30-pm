@@ -13,17 +13,18 @@ public class FileWriterExample
         FileWriter writer = null;
         try {
             writer = new FileWriter(filePath, true); // 'true' for append mode
-            writer.write("Ashwin");
+            writer.write("Ashwin , 76.5");
             writer.write("\n");
-            writer.write("Bhavika");
+            writer.write("Bhavika, 97");
             writer.append("\n");
-            writer.append("Vatsala");
+            writer.append("Vatsala, 97");
             writer.append("\n");
-            writer.append("Lakshya");
+            writer.append("Lakshya, 97");
             //writer.close();
             //writer.flush();
             writer.close();
-            System.out.println("File written successfully.");
+            //System.out.println("File written successfully.");
+            System.out.println();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
